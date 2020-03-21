@@ -1,0 +1,46 @@
+{
+    "name": "alihankoc/elastic",
+    "description": "Elastic Wrapper for Laravel",
+    "type": "project",
+    "keywords": [],
+    "require": {
+        "php": ">=7",
+        "elasticsearch/elasticsearch": "dev-master",
+        "illuminate/support": "^7.0|^8.0",
+        "illuminate/contracts": "^7.0|^8.0",
+        "illuminate/database": "~4.2|^5|^6",
+        "illuminate/config": "~4.2|^5|^6",
+        "nesbot/carbon": "~1.0|~2",
+        "symfony/http-foundation": "^3.3|^4.0|^5.0",
+        "symfony/http-kernel": "^3.3|^4.0|^5.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5",
+        "laravel/framework": "^7.0|^8.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alihan KOÇ",
+            "email": "alihan@alihankoc.com.tr"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "AlihanKoc\\Elastic\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AlihanKoc\\Elastic\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Elastic\\ElasticServiceProvider"
+            ]
+        }
+    }
+}
