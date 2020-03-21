@@ -8,7 +8,9 @@ interface Elastic
 {
     public function post($index, $id, $body);
 
-    public function get($index, $id);
+    public function find($index, $id);
+
+    public function get($index);
 
     public function update($index, $id, $body);
 

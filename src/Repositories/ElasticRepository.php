@@ -20,22 +20,21 @@ class ElasticRepository implements Elastic
         $this->buildClient();
     }
 
-    public function get($index, $id)
+    public function find($index, $id)
     {
         $params = [
             'index' => $index,
             'id'    => $id
         ];
+        return $this->client->get($params);
+    }
 
-        try {
-
-            return $this->client->get($params)['_source'];
-
-        } catch (Missing404Exception $e){
-
-            abort(404);
-
-        }
+    public function get($index)
+    {
+        $params = [
+            'index' => $index
+        ];
+        return $this->client->get($params);
     }
 
     public function post($index, $id, $body)
