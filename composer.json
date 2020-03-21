@@ -1,7 +1,7 @@
 {
     "name": "alihankoc/elastic",
     "description": "Elastic Wrapper for Laravel",
-    "type": "project",
+    "type": "library",
     "keywords": [],
     "require": {
         "php": ">=7",
