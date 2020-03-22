@@ -10,56 +10,53 @@ use Elasticsearch\Common\Exceptions\Missing404Exception;
 
 class ElasticRepository implements Elastic
 {
-    protected $clientBuilder;
+    private $clientBuilder;
 
-    protected $client;
+    private $client;
 
-    public function __construct(ClientBuilder $clientBuilder)
-    {
+    public function __construct(ClientBuilder $clientBuilder){
         $this->clientBuilder = $clientBuilder;
         $this->buildClient();
     }
 
-    public function find($index, $id)
-    {
+    public function find($index, $id){
         $params = [
             'index' => $index,
             'id'    => $id
         ];
+
         return $this->client->get($params);
     }
 
-    public function get($index)
-    {
+    public function search($index,$body = null){
         $params = [
-            'index' => $index
+            'index' => $index,
+            'body'=>$body
         ];
-        return $this->client->get($params);
+
+        return $this->client->search($params);
     }
 
-    public function post($index, $id, $body)
-    {
+    public function post($index, $id, $body){
         // TODO: Implement post() method.
     }
 
-    public function update($index, $id, $body)
-    {
+    public function update($index, $id, $body){
         // TODO: Implement update() method.
     }
 
-    public function delete($index, $id)
-    {
+    public function delete($index, $id){
         // TODO: Implement delete() method.
     }
 
-    public function search($index, $query)
-    {
-        // TODO: Implement search() method.
+    private function buildClient(){
+        $this->clientBuilder::create();
+        $this->clientBuilder->setHosts($this->getHosts());
+        $this->client = $this->clientBuilder->build();
     }
 
-    protected function buildClient(){
-
-        $hosts = [
+    private function getHosts(){
+        return [
             [
                 'host' => config('elastic.elastic_host'),
                 'port' => config('elastic.elastic_port'),
@@ -69,9 +66,5 @@ class ElasticRepository implements Elastic
                 'pass' => config('elastic.elastic_password')
             ]
         ];
-
-        $this->clientBuilder::create();   // Instantiate a new ClientBuilder
-        $this->clientBuilder->setHosts($hosts);           // Set the hosts
-        $this->client = $this->clientBuilder->build();
     }
 }

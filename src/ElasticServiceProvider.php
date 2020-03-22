@@ -16,6 +16,7 @@ class ElasticServiceProvider extends ServiceProvider
             Elastic::class,
             ElasticRepository::class
         );
+
     }
 
     protected function configPath()

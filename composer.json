@@ -1,5 +1,5 @@
 {
-    "name": "alihankoc/elastic",
+    "name": "alihankoc/laravelastic",
     "description": "Elastic Wrapper for Laravel",
     "type": "library",
     "keywords": [],

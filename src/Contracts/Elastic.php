@@ -10,11 +10,10 @@ interface Elastic
 
     public function find($index, $id);
 
-    public function get($index);
-
     public function update($index, $id, $body);
 
     public function delete($index, $id);
 
-    public function search($index, $query);
+    public function search($index, $body);
+
 }
