@@ -1,9 +1,9 @@
 <?php
 
-namespace AlihanKoc\Elastic;
+namespace AlihanKoc\Laravelastic;
 
-use AlihanKoc\Elastic\Contracts\Elastic;
-use AlihanKoc\Elastic\Repositories\ElasticRepository;
+use AlihanKoc\Laravelastic\Contracts\Elastic;
+use AlihanKoc\Laravelastic\Repositories\ElasticRepository;
 use Illuminate\Support\ServiceProvider;
 
 class ElasticServiceProvider extends ServiceProvider

@@ -1,12 +1,11 @@
 <?php
 
 
-namespace AlihanKoc\Elastic\Repositories;
+namespace AlihanKoc\Laravelastic\Repositories;
 
 
-use AlihanKoc\Elastic\Contracts\Elastic;
+use AlihanKoc\Laravelastic\Contracts\Elastic;
 use Elasticsearch\ClientBuilder;
-use Elasticsearch\Common\Exceptions\Missing404Exception;
 
 class ElasticRepository implements Elastic
 {

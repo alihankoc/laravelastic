@@ -1,7 +1,7 @@
 <?php
 
 
-namespace AlihanKoc\Elastic;
+namespace AlihanKoc\Laravelastic;
 
 
 use Illuminate\Support\Facades\Facade;
@@ -10,6 +10,6 @@ class Elastic extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'AlihanKoc\Elastic\Contracts\Elastic';
+        return 'AlihanKoc\Laravelastic\Contracts\Elastic';
     }
 }

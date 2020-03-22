@@ -1,7 +1,7 @@
 <?php
 
 
-namespace AlihanKoc\Elastic\Contracts;
+namespace AlihanKoc\Laravelastic\Contracts;
 
 
 interface Elastic

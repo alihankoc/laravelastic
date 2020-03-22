@@ -20,18 +20,18 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "AlihanKoc\\Elastic\\": "src/"
+            "AlihanKoc\\Laravelastic\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "AlihanKoc\\Elastic\\Tests\\": "tests/"
+            "AlihanKoc\\Laravelastic\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "AlihanKoc\\Elastic\\ElasticServiceProvider"
+                "AlihanKoc\\Laravelastic\\ElasticServiceProvider"
             ]
         }
     }
