@@ -6,14 +6,36 @@ namespace AlihanKoc\Laravelastic\Contracts;
 
 interface Elastic
 {
-    public function post($index, $id, $body);
+    public function index($index);
 
-    public function find($index, $id);
+    public function id($id);
 
-    public function update($index, $id, $body);
+    public function find($id);
 
-    public function delete($index, $id);
+    public function type($type);
 
-    public function search($index, $body);
+    public function limit($limit);
+
+    public function offset($offset);
+
+    public function body($body);
+
+    public function get();
+
+    public function getBuildedQuery();
+
+    public function delete();
+
+    public function create($data);
+
+    public function update($data);
+
+    public function updateWithScript($script, $scriptParams, $upsert);
+
+    public function page($pagenumber, $pagesize);
+
+    public function query();
+
+    public function search();
 
 }
